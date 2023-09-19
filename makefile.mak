@@ -1,10 +1,10 @@
 CC = g++
 CFLAGS = -Wall -g
 
-main.exe: main.o student.o
-	$(CC) $(CFLAGS) -o main.exe main.o student.o
+main.exe: main.o Calculator.o
+	$(CC) $(CFLAGS) -o main.exe main.o Calculator.o
 
-main.o: main.cpp student.cpp student.h
+main.o: main.cpp Calculator.h
 	$(CC) $(CFLAGS) -c main.cpp
 
-student.o: student.h
+Calculator.o: Calculator.h
