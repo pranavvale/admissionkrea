@@ -7,6 +7,7 @@ int main() {
     int studentId;
 
     std::cout << "Enter student name: ";
+    std::cin.ignore(); 
     std::getline(std::cin, studentName);
 
     std::cout << "Enter student ID: ";
@@ -19,11 +20,12 @@ int main() {
     std::cout << "Enter quiz score: ";
     std::cin >> quizScore;
 
-
+    
     student->setQuizScore(quizScore);
 
     std::cout << "\nStudent Grade Report:\n";
 
+   
     student->displayInfo();
 
     delete student;
